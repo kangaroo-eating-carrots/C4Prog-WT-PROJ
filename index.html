@@ -6,14 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JM Project</title>
   <link rel="stylesheet" href="./assets/css/site.css">
+  <link rel="stylesheet" href="./assets/css/mobile.css">
 </head>
 <body class="bg-gray-100">
-  <header class="bg-black text-white stciky top-0 p-4 pb-6 pl-20 flex flex-row z-10">
-    <img class="w-20 h-20 ml-10"  src="./assets/images/logo.jpeg" alt="Logo">
-    <section class="flex flex-col">
+  <header id="header" class="bg-black text-white stciky top-0 p-4 pb-6 pl-20 flex flex-row z-10">
+    <img class="w-20 h-20 ml-5"  src="./assets/images/logo.jpeg" alt="Logo">
+    <section id="header-section" class="flex flex-col">
       <h1 class="text-2xl font-bold ml-5">JM Project Board</h1>
-      <nav class="pt-5 ml-10 italic font-semibold text-xl">
-        <ul class="flex flex-row gap-8 w-full">
+      <nav id="nav" class="pt-5 ml-10 italic font-semibold text-xl">
+        <input id="side-menu" class="side-menu" type="checkbox" >
+        <label id="hamb" class="hamb" for="side-menu"><span id="hamb-line" class="hamb-line"></span></label>
+        <ul id="menu" class="flex flex-row gap-8 w-full menu bg-black">
           <li>
             <a class="text-gray-200 hover:text-white ease-in-out pb-2" href="./index.html">
               Home

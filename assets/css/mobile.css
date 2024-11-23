@@ -6,6 +6,8 @@ nav > label{
   display: none;
 }
 
+
+
 @media (max-width: 700px) {
 
   /* Header & Nav */
@@ -168,6 +170,30 @@ nav > label{
   #footer {
     height: 8rem;
   }
+
+  /* End of footer*/
+
+  /* main */
+
+  #main {
+    width: 100%;
+  }
+  #dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #dashboard > article {
+    width: 100%;
+  }
+
+
+  aside {
+    display: none;
+  }
+
+
+
 
   
 

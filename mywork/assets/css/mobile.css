@@ -179,5 +179,8 @@ nav > label{
     width: 100%;
   }
 
+  .project-image {
+    margin-right: 0;
+    width: 90%;
   }
 }

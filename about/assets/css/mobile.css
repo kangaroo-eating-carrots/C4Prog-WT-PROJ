@@ -178,16 +178,12 @@ nav > label{
   #main {
     width: 100%;
   }
-  #dashboard {
-    display: flex;
-    flex-direction: column;
+
+  #web-list {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  #dashboard > article {
-    width: 100%;
-  }
-
-  aside {
-    display: none;
+  #image-list {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }

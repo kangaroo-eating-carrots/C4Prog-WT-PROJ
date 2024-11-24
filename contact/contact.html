@@ -47,7 +47,38 @@
     </section>
   </header>
   <main id="main" class="flex flex-col w-4/5 mx-auto p-10 bg-gray-50">
-
+    <article>
+      <header>
+        <h2 class="text-3xl font-bold text-gray-500 mb-5 text-center">Contact Me</h2>
+      </header>
+      <section class="shadow p-4">
+        <form id="myForm">
+          <section class="flex flex-col place-items-center mb-5">
+            <h3 class="hidden">Name Input</h3>
+            <label for="nameInput" class="w-4/5 mb-1 text-gray-500 font-mono">Your Name</label>
+            <input id="nameInput" type="text" class="w-4/5 border border-gray-200 font-mono pl-2">
+          </section>
+          <section class="flex flex-col place-items-center mb-5">
+            <h3 class="hidden">Phone number Input</h3>
+            <label for="phoneInput" class="w-4/5 mb-1 text-gray-500 font-mono">Your Phone number</label>
+            <input id="phoneInput" type="number" class="w-4/5 border border-gray-200 font-mono pl-2">
+          </section>
+          <section class="flex flex-col place-items-center mb-5">
+            <h3 class="hidden">Email Input</h3>
+            <label for="textAreaInput" class="w-4/5 mb-1 text-gray-500 font-mono">Your Email</label>
+            <input id="emailInput" type="email" class="w-4/5 border border-gray-200 font-mono pl-2">
+          </section>
+          <section class="flex flex-col place-items-center mb-5">
+            <h3 class="hidden">Query Input</h3>
+            <label for="textInput" class="w-4/5 mb-1 text-gray-500 font-mono">Your Query/Request</label>
+            <textarea id="textInput" type="text" class="w-4/5 border border-gray-200 font-mono pl-2"></textarea>
+          </section>
+          <section class="flex flex-col place-items-center mt-10 mb-5">
+            <h3 class="hidden">Send Button</h3>
+            <button name="submit" class="w-44 h-10 bg-black text-white font-mono text-lg place-self-center ease-in-out rounded-md hover:bg-gray-500 send-button">S E N D</button>
+          </section>
+        </form>
+      </section>
   </main>
   <footer id="footer" class="flex flex-col mt-auto gap-15 p-5 bg-black text-gray-400 h-48">
     <section class="content-center flex flex-row justify-self-center self-center">

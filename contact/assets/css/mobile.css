@@ -39,11 +39,9 @@ nav > label{
     margin-left: 1rem;
   }
 
-      /* 
-    Addition for Hamburger Menu
-    Reference: 
-    https://blog.logrocket.com/create-responsive-mobile-menu-css-without-javascript/
-    */
+
+  
+/* Reference: https://blog.logrocket.com/create-responsive-mobile-menu-css-without-javascript/ */
   
   .nav{
     grid-template-columns: auto;

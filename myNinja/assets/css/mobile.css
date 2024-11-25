@@ -1,0 +1,186 @@
+nav > input{
+  display: none;
+}
+
+nav > label{
+  display: none;
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* Header & Nav */
+  #header img{
+    display: none;
+  }
+
+  #header{
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+  }
+
+  #header-section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: right;
+  }
+
+  #header-section > h1{
+    justify-self: center;
+    width: 20rem;
+  }
+
+  #nav{
+    padding-top: 0rem;
+    justify-self: right;
+    margin-left: 1rem;
+  }
+
+      /* 
+    Addition for Hamburger Menu
+    Reference: 
+    https://blog.logrocket.com/create-responsive-mobile-menu-css-without-javascript/
+    */
+  
+  .nav{
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    background-color: #000000;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 3px;
+    border: none;
+  }
+
+  .menu{
+		display: flex;
+		flex-direction: column;
+		width: 200px;
+		height: 310px;
+		right: -100%;
+		margin-top: 56px; 
+		position: fixed;
+		transition: right 0.5s ease;
+    font-weight: bold;
+	}
+
+  .menu a[href]{
+		display: block;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		padding-right: 20px;
+		padding-left: 0px;
+		font-size: 15px;
+		text-align: right;
+	}
+
+	.hamb{
+    display: block;
+		cursor: pointer;
+		float: right;
+		padding-top: 1rem;
+    padding-left: 1rem;
+    border: none;
+    justify-self: end;
+	}
+
+	.hamb-line {
+		background: #ffffff;
+		display: block;
+		height: 4px;
+		position: relative;
+		width: 30px;
+	}
+
+	.hamb-line::before,
+	.hamb-line::after{
+		background: #ffffff;
+		content: '';
+		display: block;
+		height: 100%;
+		position: absolute;
+		transition: all .2s ease-out;
+		width: 100%;
+	}
+	.hamb-line::before{
+		top: 7px;
+	}
+	.hamb-line::after{
+		top: -7px;
+	}
+
+  .side-menu {
+		display: none;
+	} 
+
+	.side-menu:checked ~ .menu{
+		right: 0;
+	}
+
+	.side-menu:checked ~ .hamb .hamb-line {
+		background: transparent;
+	}
+	.side-menu:checked ~ .hamb .hamb-line::before {
+		transform: rotate(-45deg);
+		top:0;
+	}
+	.side-menu:checked ~ .hamb .hamb-line::after {
+		transform: rotate(45deg);
+		top:0;
+	}
+
+	body:has(.side-menu:checked) {
+	overflow: hidden;
+	}
+
+  /* End of Nav */
+
+  /* Footer */
+  #Tafe {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.5rem;
+  }
+
+  #ScreenCraft {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.5rem;
+  }
+
+  #Tailwind {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.5rem;
+  }
+
+  #Nu {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.5rem;
+  }
+
+  footer p {
+    font-size: x-small;
+  }
+
+  #footer {
+    height: 8rem;
+  }
+
+  /* End of footer*/
+
+  /* main */
+
+  #main {
+    width: 100%;
+  }
+
+  .project-image {
+    margin-right: 0;
+    width: 90%;
+  }
+}

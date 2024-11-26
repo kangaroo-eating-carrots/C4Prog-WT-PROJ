@@ -183,4 +183,39 @@ nav > label{
     margin-right: 0;
     width: 90%;
   }
+
+  #aus-section {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  #aus-info-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aus-info-data {
+    margin-bottom: 2rem;
+  }
+
+  .aus-info-states {
+    font-size:medium;
+  }
+
+  #aus-img-section {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    justify-content: left;
+
+  }
+
+  #aus-main-img {
+    width: 15rem;
+  }
+
+  #aus-sub-img {
+    display: none;
+  }
 }

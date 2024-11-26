@@ -1,7 +1,12 @@
-const ausInfoOne = document.getElementById("aus-info-one");
-const ausInfoTwo = document.getElementById("aus-info-two");
-const ausInfoThree = document.getElementById("aus-info-three");
-const ausInfoFour = document.getElementById("aus-info-four");
+const ausInfoSurface = document.getElementById("aus-surface");
+const ausInfoPopulation = document.getElementById("aus-population");
+const ausInfoGDP = document.getElementById("aus-gpd");
+const ausInfoAvgGDP = document.getElementById("aus-avg-gdp");
+/*
+window.addEventListener("load", (event) => {
+  updateAusInfo()
+});
+*/
 
 const apiKey = "bzpxhhKf7AUdOU4tmX/t4w==HsCWSKOqf6pMB9BZ"
 
@@ -22,17 +27,27 @@ async function updateAusInfo() {
     const ausInfo = await getAusInfo();
     console.log(ausInfo)
     try{
-      const ausGDP = ausInfo[0].gdp;
-      ausInfoOne.innerHTML = ausGDP;
+      ausInfoSurface.innerHTML = ausInfo[0].surface_area;
+      ausInfoPopulation.innerHTML = ausInfo[0].population;
+      ausInfoGDP.innerHTML = ausInfo[0].gdp;
+      ausInfoAvgGDP.innerHTML = ausInfo[0].gdp_per_capita;
     }catch (error) {
-      console.error('Error:', error);
-      results.push('Error: ' + fact.error);
+      console.error(ausInfo.error);
+      ausInfoSurface.innerHTML = ausInfo.error;
+      ausInfoPopulation.innerHTML = ausInfo.error;
+      ausInfoGDP.innerHTML = ausInfo.error;
+      ausInfoAvgGDP.innerHTML = ausInfo.error;
       return;
     }
   }catch(error){
       console.error(error);
-      ausInfoOne.innerHTML = error;
+      ausInfoSurface.innerHTML = error;
+      ausInfoPopulation.innerHTML = error;
+      ausInfoGDP.innerHTML = error;
+      ausInfoAvgGDP.innerHTML =error;
       return;
   }
 }
+
+
 

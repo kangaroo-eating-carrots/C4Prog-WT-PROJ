@@ -46,34 +46,36 @@
       </nav> 
     </section>
   </header>
-  <main id="main" class="w-4/5 mx-auto p-10 bg-gray-50">
+  <main id="main" class="flex flex-col w-4/5 mx-auto p-10 bg-gray-50">
     <article class="shadow m-2 gap-4 border-gray-500 border-2 pl-3 pr-3 pt-3 pb-3" >
       <header class="p-4">
         <h2 class="text-2xl font-bold text-gray-500">AUSTRALIA</h2>
       </header>
-      <section class="pl-4 flex flex-row">
+      <section id="aus-section" class="pl-4 flex flex-row gap-20">
         <h3 class="hidden">Australia information and images</h3>
-        <section class="grid grid-cols-2 w-3/5 min-w-96 max-w-2xl">
+        <section id="aus-info-section" class="grid grid-cols-2 min-w-80 max-w-2xl grow mr-10 max-2xl:mr-3 max-lg:-mr-36">
           <h4 class="hidden">Australia information</h4>
-          <label class="text-xl font-mono pl-3">Surface(km<sup>2</sup>) :</label>
-          <label id="aus-surface" class="text-xl font-mono">Loading ...</label>
-          <label class="text-xl font-mono pl-3">States(Capital) : </label>
-          <label class="text-xl font-mono">WA(Perth), NT(Darwin), </label>
+          <label class="text-xl font-mono pl-3 max-lg:pl-0">Surface(km<sup>2</sup>) :</label>
+          <label id="aus-surface" class="text-xl font-mono aus-info-data">Loading ...</label>
+          <label class="text-xl font-mono pl-3 max-lg:pl-0">States(Cap.) : </label>
+          <label class="text-xl font-mono aus-info-states">WA(Perth), NT(Darwin), </label>
           <label class="text-xl font-mono"></label>
-          <label class="text-xl font-mono">Qld(Brisbane), NSW(Sydney),</label>
+          <label class="text-xl font-mono aus-info-states">Qld(Brisbane), NSW(Sydney),</label>
           <label class="text-xl font-mono"></label>
-          <label class="text-xl font-mono">Tas(Hobart), SA(Adelaide)</label>
+          <label class="text-xl font-mono aus-info-states">Tas(Hobart), SA(Adelaide)</label>
           <label class="text-xl font-mono"></label>
-          <label class="text-xl font-mono">ACT(Canberra)</label>
-          <label class="text-xl font-mono pl-3">Population :</label>
-          <label id="aus-population" class="text-xl font-mono">Loading ...</label>
-          <label class="text-xl font-mono pl-3">GDP (USD) :</label>
-          <label id="aus-gpd" class="text-xl font-mono">Loading ...</label>
-          <label class="text-xl font-mono pl-3">Avg GDP(USD) :</label>
-          <label id="aus-avg-gdp" class="text-xl font-mono">Loading ...</label>
+          <label class="text-xl font-mono aus-info-states aus-info-data ">ACT(Canberra)</label>
+          <label class="text-xl font-mono pl-3 max-lg:pl-0">Population :</label>
+          <label id="aus-population" class="text-xl font-mono aus-info-data">Loading ...</label>
+          <label class="text-xl font-mono pl-3 max-lg:pl-0">GDP (USD) :</label>
+          <label id="aus-gpd" class="text-xl font-mono aus-info-data">Loading ...</label>
+          <label class="text-xl font-mono pl-3 max-lg:pl-0">Avg GDP(USD) :</label>
+          <label id="aus-avg-gdp" class="text-xl font-mono aus-info-data">Loading ...</label>
         </section>
-        <section>
-
+        <section id="aus-img-section" class="flex flex-row place-content-end place-items-center gap-10 h-96 w-1/2 max-2xl:flex-col max-2xl:place-content-center">
+          <h3 class="hidden">Australina images</h3>
+          <img id="aus-main-img" alt="Flag of Australia" src="./assets/images/Flag_of_Australia.svg" class="w-1/3 min-w-48">
+          <img id="aus-sub-img" alt="Coat of Arms of Australia" src="./assets/images/Coat_of_Arms_of_Australia.svg" class="w-1/3 min-w-48">
         </section>
       </section>
       <section class="flex flex-col">

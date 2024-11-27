@@ -8,8 +8,11 @@ const cityInfoRegion = document.getElementById("city-region");
 const cityInfoPopulation = document.getElementById("city-population");
 const cityInfoLatitude = document.getElementById("city-latitude");
 const cityInfoLongitude = document.getElementById("city-longitude");
+const citySelector = document.getElementById("cities");
+const cityStateFlag = document.getElementById("city-state-img");
 
 let cityName = "Perth";
+let cityImgPath = "./assets/images/" + cityName + ".svg";
 const apiKey = "toFrmKlRG0BC4xjvCjfhcA==yTSIzdizhSUDxdEK"
 
 /*
@@ -17,9 +20,24 @@ window.addEventListener("load", (event) => {
   updateAusInfo();
   updateCityInfo(cityName);
 });
-
 */
 
+citySelector.addEventListener("change", async (event) =>{
+  cityName = event.target.value;
+  await updateCityInfo(cityName)
+
+  if (cityName === "Darwin"){
+    cityInfoRegion.innerHTML = "Northern Territory";
+  }
+
+  if (cityName === "Canberra"){
+    cityInfoRegion.innerHTML = "Australian Capital Territory";
+  }
+
+  cityImgPath = "./assets/images/" + cityName + ".svg";
+  cityStateFlag.src = cityImgPath;
+
+})
 
 
 

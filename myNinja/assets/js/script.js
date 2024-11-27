@@ -15,12 +15,12 @@ let cityName = "Perth";
 let cityImgPath = "./assets/images/" + cityName + ".svg";
 const apiKey = "toFrmKlRG0BC4xjvCjfhcA==yTSIzdizhSUDxdEK"
 
-/*
 window.addEventListener("load", (event) => {
   updateAusInfo();
   updateCityInfo(cityName);
+  cityStateFlag.src = cityImgPath;
 });
-*/
+
 
 citySelector.addEventListener("change", async (event) =>{
   cityName = event.target.value;

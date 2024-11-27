@@ -703,6 +703,10 @@ video {
   height: 16rem;
 }
 
+.max-h-48 {
+  max-height: 12rem;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -866,6 +870,10 @@ video {
 
 .place-content-stretch {
   place-content: stretch;
+}
+
+.place-items-start {
+  place-items: start;
 }
 
 .place-items-end {

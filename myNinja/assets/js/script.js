@@ -2,13 +2,25 @@ const ausInfoSurface = document.getElementById("aus-surface");
 const ausInfoPopulation = document.getElementById("aus-population");
 const ausInfoGDP = document.getElementById("aus-gpd");
 const ausInfoAvgGDP = document.getElementById("aus-avg-gdp");
+
+const cityInfoName = document.getElementById("city-name");
+const cityInfoRegion = document.getElementById("city-region");
+const cityInfoPopulation = document.getElementById("city-population");
+const cityInfoLatitude = document.getElementById("city-latitude");
+const cityInfoLongitude = document.getElementById("city-longitude");
+
+let cityName = "Perth";
+const apiKey = "toFrmKlRG0BC4xjvCjfhcA==yTSIzdizhSUDxdEK"
+
 /*
 window.addEventListener("load", (event) => {
-  updateAusInfo()
+  updateAusInfo();
+  updateCityInfo(cityName);
 });
+
 */
 
-const apiKey = "bzpxhhKf7AUdOU4tmX/t4w==HsCWSKOqf6pMB9BZ"
+
 
 
 async function getAusInfo() {
@@ -49,5 +61,48 @@ async function updateAusInfo() {
   }
 }
 
+async function getCityInfo(cityName) {
+  const urlPath = "https://api.api-ninjas.com/v1/city?name=" + cityName;
+  const response = await fetch(urlPath, {
+    method: 'GET',
+    headers: { 'X-Api-Key': apiKey },
+  });
+
+  const result = await response.json();
+
+  return result;
+}
+
+
+async function updateCityInfo(cityName) {
+  try{
+    const cityInfo = await getCityInfo(cityName);
+    console.log(cityInfo);
+  
+  try{
+    cityInfoName.innerHTML = cityInfo[0].name;
+    cityInfoRegion.innerHTML = cityInfo[0].region;
+    cityInfoPopulation.innerHTML = cityInfo[0].population;
+    cityInfoLatitude.innerHTML = cityInfo[0].latitude;
+    cityInfoLongitude.innerHTML = cityInfo[0].longitude;
+  } catch (error) {
+    console.error(cityInfo.error);
+    cityInfoName.innerHTML = cityInfo.error;
+    cityInfoRegion.innerHTML = cityInfo.error;
+    cityInfoPopulation.innerHTML = cityInfo.error;
+    cityInfoLatitude.innerHTML = cityInfo.error;
+    cityInfoLongitude.innerHTML = cityInfo.error;
+    return;
+  }
+} catch(error) {
+  console.error(error);
+  cityInfoName.innerHTML = error;
+  cityInfoRegion.innerHTML = error;
+  cityInfoPopulation.innerHTML = error;
+  cityInfoLatitude.innerHTML = error;
+  cityInfoLongitude.innerHTML = error;
+  return;
+  }
+}
 
 

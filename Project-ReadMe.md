@@ -3,7 +3,9 @@
 |----------|----------------|----------|
 | black | 0, 0, 0 | #000000 |
 | white | 255, 255, 255 | #FFFFFF |
-| name 1 | rrr, ggg, bbb | #RRGGBB |
-| name 2 | rrr, ggg, bbb | #RRGGBB |
-| name 3 | rrr, ggg, bbb | #RRGGBB |
-| name 4 | rrr, ggg, bbb | #RRGGBB |
+| Gray-50 | 249, 250, 251 | #F9FAFB |
+| Gray-200 | 229, 231, 235 | #E5E7EB |
+| Gray-400 | 156, 163, 175 | #9CA3AF |
+| Gray-500 | 107, 114, 128 | #6B7280 |
+| Gray-800 | 31, 41, 55 | #1F2937 |
+| Amber-50 | 255, 251, 235 | #FFFBEB |
